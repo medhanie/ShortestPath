@@ -15,7 +15,7 @@ public class Application {
 	private static WorkPool workpool = new WorkPool();
 	private static int weight[][] = new int[n][n];
 	private static int mindist[] = new int[n];
-	private static boolean inflag[] = new boolean[n];
+	private static boolean inflag[] = new boolean[n]; 
 	private static Lock L[] = new ReentrantLock[n];
 
 	private static StringBuffer output = new StringBuffer();
@@ -94,7 +94,7 @@ public class Application {
 		output.append("Sequential Execution Time:\t" + sequentialTime);
 		output.append("\n________________________________\n");
 
-		/***************** Unpotimized Parallel version ****************/
+		/***************** Unoptimized Parallel version ****************/
 		initializeAll();
 		time = System.currentTimeMillis();
 		Runnable unoptimized = new UnoptimizedWorker(workpool, weight, mindist,
